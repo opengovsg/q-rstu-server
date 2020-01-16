@@ -1,0 +1,10 @@
+{
+  "extends": "@opengovsg/eslint-config-opengovsg",
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "no-console": "warn"
+  }
+}

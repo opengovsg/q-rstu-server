@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <script src="/assets/js/submit.js"></script>
+
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.1/axios.js" 
+      integrity="sha256-J6UlS3kpnhiSiNQ9lGoV9Q94ZpIPff3UZcR0dDwIT6g=" 
+      crossorigin="anonymous">
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  </head>
+  <body>
+    <form>
+      <div>CPF Account Number / NRIC: <input id="cpf-account-number" type="text" /></div>
+      <div>Amount: $ <input id="amount" type="number" max="7000" min="1" /></div>
+      <div>Contact Number: <input id="contact-number" type="number" minlength="8"/></div>
+      <div>
+        By ticking the reCAPTCHA, I declare that: 
+        <ol type="a">
+          <li>all the particulars given in this form are true and correct.</li>
+          <li>
+            I –
+            <ol type="i">
+              <li>have never been a bankrupt; or</li>
+              <li>am a discharged bankrupt; or</li>
+              <li>am an undischarged bankrupt and have obtained the Official Assignee’s approval to make a cash top-up.</li>
+            </ol>
+          </li>
+          <li>I have read, understood and accept the terms and conditions stated in the previous page.</li>
+        </ol>
+
+        I also agree to the following:
+        <ol type="a">
+          <li>
+            For CPF Board to disclose the information given in this form to the Inland Revenue Authority of Singapore (IRAS) 
+            for the granting of tax relief in the following year's Tax Assessment. I am aware that under the Singapore Income Tax Act, 
+            there are penalties for failing to give a return, providing an incorrect return or making a false declaration.
+          </li>
+          <li>The <strong>top-up is irrevocable</strong> (i.e. <strong>my cash top-ups cannot be returned to me</strong>).</li>
+        </ol>
+
+        I have also read and understood, and have informed the recipient of the following: 
+        <ol type="a">
+          <li>
+            The top-up monies are meant for his retirement needs. Therefore he cannot apply to withdraw the top-up monies:
+            <ol type="i">
+              <li>under any CPF schemes for education, investments, insurance, housing, CPF transfers and etc;</li>
+              <li>from his RA (even if he owns a property); and</li>
+              <li>via exemption from setting aside a retirement sum in the RA.</li>
+            </ol>
+          </li>
+          <li>
+            In the event of the recipient's death, any remaining cash top-ups will be paid to his nominees based on his CPF nomination. 
+            If there is no CPF nomination, the remaining cash top-ups will be transferred to the Public Trustee for distribution 
+            in accordance with the intestacy laws or inheritance certificate (for Muslims) in Singapore.
+          </li>
+        </ol>
+      </div>
+      <div id="txn-metadata">
+        <div id="request-verification-token" data-value="<%= requestVerificationToken %>"></div>
+        <div class="g-recaptcha" data-callback="storeRecaptcha" data-sitekey="<%= recaptchaSiteKey %>"></div>
+      </div>
+      <button onclick="return window.submit()">Submit</button>
+    </form>
+    <div id="paynow"></div>
+  </body>
+</html>
