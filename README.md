@@ -8,7 +8,7 @@ Special Accounts (CPF SA) via the Retirement Sum Top-Up scheme (RSTU)
 
 ```bash
 export RECAPTCHA_SITE_KEY=<site key scraped from CPF e-cashier>
-node index.js
+PORT=29125 node index.js
 # Visit http://localhost:29125
 ```
 
