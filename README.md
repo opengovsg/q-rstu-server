@@ -1,4 +1,4 @@
-# q-rstu
+# qRSTU Prototype
 A proof-of-concept (PoC) demonstrating an alternative interface to 
 [CPF e-cashier](https://www.cpf.gov.sg/eSvc/Web/Cashier/ECashierHomepage)
 that wraps around the original, focusing on payments into members' own CPF 
