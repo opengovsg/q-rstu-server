@@ -1,13 +1,13 @@
 {
-  "name": "@opengovsg/cpf-proxy",
+  "name": "@opengovsg/q-rstu",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Open Government Products, Government Technology Agency of Singapore (https://open.gov.sg)",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.19.1",
     "body-parser": "^1.19.0",
